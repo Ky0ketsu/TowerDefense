@@ -3,6 +3,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using JetBrains.Annotations;
 
 public class Turret1 : MonoBehaviour
 {
@@ -13,7 +14,12 @@ public class Turret1 : MonoBehaviour
 
     public List<Transform> targets;
     private Transform currentTarget;
-    public int damage;
+    public float damage;
+    public float baseDamage;
+
+    public float level;
+
+    private bool canShoot;
 
     private void Start()
     {
@@ -39,12 +45,29 @@ public class Turret1 : MonoBehaviour
 
     private void Update()
     {
+        damage = baseDamage * level;
+
         if(targets.Count > 0)
         {
+            for (int i = 0; i < targets.Count; i++)
+            {
+                if (targets[i] == null)
+                {
+                    targets.RemoveAt(i);
+                }
+
+            }
+
             targets = targets.OrderBy(targets => Vector3.Distance(transform.position, targets.position)).ToList();
             currentTarget = targets[0];
 
             canon.LookAt(new Vector3(currentTarget.position.x, canon.position.y, currentTarget.position.z));
+        }
+
+        if(canShoot & targets.Count > 0)
+        {
+            StartCoroutine(Shoot());
+            canShoot = false;
         }
         
     }
@@ -58,12 +81,7 @@ public class Turret1 : MonoBehaviour
             lastMissile.GetComponent<BulletTurret>().currentTarget = currentTarget;
             lastMissile.GetComponent<BulletTurret>().currentDamage = damage;
         }
-        ShootLoop();
-    }
-
-    private void ShootLoop()
-    {
-        StartCoroutine(Shoot());
+        canShoot = true;
     }
 
 }

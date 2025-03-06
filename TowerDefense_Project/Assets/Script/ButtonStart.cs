@@ -7,7 +7,7 @@ public class ButtonStart : MonoBehaviour
     public void StartButton()
     {
         gameManager = GameObject.Find("GameManager");
-        gameManager.GetComponent<GameManager>().StartGame();
+        gameManager.GetComponent<GameManager>().StartNextWave();
         gameObject.SetActive(false);
     }
 }

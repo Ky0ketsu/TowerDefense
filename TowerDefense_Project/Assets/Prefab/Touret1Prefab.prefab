@@ -129,6 +129,7 @@ GameObject:
   - component: {fileID: 7850606763766329206}
   - component: {fileID: 3275043778809227021}
   - component: {fileID: 6085777518340459987}
+  - component: {fileID: 2090716227873984792}
   m_Layer: 0
   m_Name: Touret1Prefab
   m_TagString: Untagged
@@ -145,7 +146,7 @@ Transform:
   m_GameObject: {fileID: 2254734303629937511}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.5, y: 1, z: 2.5}
+  m_LocalPosition: {x: -12.5, y: 1, z: 7.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -169,6 +170,8 @@ MonoBehaviour:
   reloadTime: 1
   targets: []
   damage: 5
+  baseDamage: 0
+  level: 0
 --- !u!54 &6085777518340459987
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -196,6 +199,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &2090716227873984792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2254734303629937511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec6154f17518482459074e1b82e59310, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cost: 50
 --- !u!1 &2971235869102365846
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,7 +4,7 @@ public class BulletTurret : MonoBehaviour
 {
     public Transform currentTarget;
     public float missileSpeed;
-    public int currentDamage;
+    public float currentDamage;
 
 
     public void Update()
@@ -18,7 +18,7 @@ public class BulletTurret : MonoBehaviour
         if (other.transform.name == currentTarget.transform.name)
         {
             Debug.Log("toucher");
-            other.GetComponent<EnnemyHP>().Damage(currentDamage);
+            other.transform.parent.GetComponent<EnnemyHP>().Damage(currentDamage);
 
             Destroy(gameObject);
         }
