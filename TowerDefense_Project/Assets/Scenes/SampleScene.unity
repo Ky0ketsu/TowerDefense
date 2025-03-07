@@ -8265,7 +8265,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Canon
+  m_text: 'Canon
+
+    50
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8292,7 +8296,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35.7
+  m_fontSize: 27.05
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -8690,7 +8694,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 76.75
+  m_fontSize: 58.15
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -10551,7 +10555,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10578,7 +10582,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
+  m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -12715,6 +12719,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Sniper
 
+    100
+
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -12742,7 +12748,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35.6
+  m_fontSize: 26.95
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -14215,7 +14221,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: '
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -19245,7 +19253,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 48.3
+  m_fontSize: 36.6
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -19867,75 +19875,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c08abe7c74dcad4e8ddb48c832752d0, type: 3}
---- !u!1001 &1673872617
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2254734303629937511, guid: fdfbc33611f2d73428b07f768d8befd3, type: 3}
-      propertyPath: m_Name
-      value: Touret1Prefab
-      objectReference: {fileID: 0}
-    - target: {fileID: 3275043778809227021, guid: fdfbc33611f2d73428b07f768d8befd3, type: 3}
-      propertyPath: level
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 3275043778809227021, guid: fdfbc33611f2d73428b07f768d8befd3, type: 3}
-      propertyPath: baseDamage
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3275043778809227021, guid: fdfbc33611f2d73428b07f768d8befd3, type: 3}
-      propertyPath: reloadTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7850606763766329206, guid: fdfbc33611f2d73428b07f768d8befd3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 27.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7850606763766329206, guid: fdfbc33611f2d73428b07f768d8befd3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7850606763766329206, guid: fdfbc33611f2d73428b07f768d8befd3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -12.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7850606763766329206, guid: fdfbc33611f2d73428b07f768d8befd3, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7850606763766329206, guid: fdfbc33611f2d73428b07f768d8befd3, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7850606763766329206, guid: fdfbc33611f2d73428b07f768d8befd3, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7850606763766329206, guid: fdfbc33611f2d73428b07f768d8befd3, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7850606763766329206, guid: fdfbc33611f2d73428b07f768d8befd3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7850606763766329206, guid: fdfbc33611f2d73428b07f768d8befd3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7850606763766329206, guid: fdfbc33611f2d73428b07f768d8befd3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: fdfbc33611f2d73428b07f768d8befd3, type: 3}
 --- !u!1001 &1674400267
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23881,7 +23820,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: '
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -24459,6 +24400,5 @@ SceneRoots:
   - {fileID: 158907929}
   - {fileID: 1604269598}
   - {fileID: 333384102}
-  - {fileID: 1673872617}
   - {fileID: 3512940692121335511}
   - {fileID: 373174799}

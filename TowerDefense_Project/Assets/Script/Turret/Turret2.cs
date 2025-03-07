@@ -21,6 +21,8 @@ public class Turret2 : MonoBehaviour
 
     private bool canShoot;
 
+    public float bulletSpeed;
+
     private void Start()
     {
         canon = transform.GetChild(0).GetChild(1);
@@ -85,6 +87,7 @@ public class Turret2 : MonoBehaviour
             GameObject lastMissile = Instantiate(missilePrefab, transform);
             lastMissile.GetComponent<BulletTurret>().currentTarget = currentTarget;
             lastMissile.GetComponent<BulletTurret>().currentDamage = damage;
+            lastMissile.GetComponent<BulletTurret>().missileSpeed = bulletSpeed;
         }
         canShoot = true;
     }

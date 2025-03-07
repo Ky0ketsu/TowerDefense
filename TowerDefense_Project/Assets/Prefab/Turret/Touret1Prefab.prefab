@@ -127,9 +127,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7850606763766329206}
-  - component: {fileID: 3275043778809227021}
   - component: {fileID: 6085777518340459987}
   - component: {fileID: 2090716227873984792}
+  - component: {fileID: 5892785632405338161}
   m_Layer: 0
   m_Name: Touret1Prefab
   m_TagString: Untagged
@@ -154,24 +154,6 @@ Transform:
   - {fileID: 8221190392114341498}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3275043778809227021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2254734303629937511}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e6b0095930a174f83a0161fe74abfd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  missilePrefab: {fileID: 4918418740472167710, guid: ef4137713ea63c44b908a0522d1fa44e, type: 3}
-  reloadTime: 1
-  targets: []
-  damage: 5
-  baseDamage: 5
-  level: 0
 --- !u!54 &6085777518340459987
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -212,6 +194,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 50
+--- !u!114 &5892785632405338161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2254734303629937511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a68e76da1222f44686469393b51ec18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  missilePrefab: {fileID: 4918418740472167710, guid: ef4137713ea63c44b908a0522d1fa44e, type: 3}
+  reloadTime: 1
+  targets: []
+  currentTarget: {fileID: 0}
+  damage: 0
+  baseDamage: 5
+  level: 0
+  bulletSpeed: 10
 --- !u!1 &2971235869102365846
 GameObject:
   m_ObjectHideFlags: 0
