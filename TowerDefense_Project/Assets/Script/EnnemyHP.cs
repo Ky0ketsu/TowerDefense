@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class EnnemyHP : MonoBehaviour
 {
+    public int baseMoney;
+    
     public float hp;
     public float baseHP;
 
@@ -17,6 +19,7 @@ public class EnnemyHP : MonoBehaviour
 
         hp = baseHP + baseHP * gameManager.GetComponent<GameManager>().currentWave;  
         maxHp = hp;
+        Debug.Log("spawn");
     }
 
     public void Update()
@@ -37,6 +40,7 @@ public class EnnemyHP : MonoBehaviour
 
         if(hp <= 0)
         {
+            gameManager.GetComponent<GameManager>().money += baseMoney + baseMoney * gameManager.GetComponent<GameManager>().currentWave;
             Destroy(gameObject);
         }
     }

@@ -5,6 +5,7 @@ public class EnnemyMove : MonoBehaviour
     private GameObject gameManager;
 
     public float speed;
+    public float baseSpeed;
     public GameObject path;
 
     public Transform target;
@@ -21,7 +22,7 @@ public class EnnemyMove : MonoBehaviour
 
     private void Update()
     {
-        speed = 5f * gameManager.GetComponent<GameManager>().enemySpeedMult;
+        speed = baseSpeed * gameManager.GetComponent<GameManager>().enemySpeedMult;
 
         Vector3 dir = target.position - transform.position;
         transform.Translate(dir.normalized * speed * Time.deltaTime);

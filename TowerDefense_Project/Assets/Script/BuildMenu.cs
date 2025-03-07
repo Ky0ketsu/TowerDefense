@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class BuildMenu : MonoBehaviour
 {
-    private GameObject menu;
-    private bool isOpen;
+    public GameObject menu;
+    public bool isOpen;
     private Vector3 startScale;
 
     private void Start()

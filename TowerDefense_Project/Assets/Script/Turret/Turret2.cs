@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using JetBrains.Annotations;
 
-public class Turret1 : MonoBehaviour
+public class Turret2 : MonoBehaviour
 {
     public GameObject missilePrefab;
 
@@ -13,7 +13,7 @@ public class Turret1 : MonoBehaviour
     private Transform canon;
 
     public List<Transform> targets;
-    private Transform currentTarget;
+    public Transform currentTarget;
     public float damage;
     public float baseDamage;
 
@@ -45,7 +45,7 @@ public class Turret1 : MonoBehaviour
 
     private void Update()
     {
-        damage = baseDamage * level;
+        damage = baseDamage + baseDamage * level * 0.5f;
 
         if(targets.Count > 0)
         {
@@ -59,9 +59,14 @@ public class Turret1 : MonoBehaviour
             }
 
             targets = targets.OrderBy(targets => Vector3.Distance(transform.position, targets.position)).ToList();
-            currentTarget = targets[0];
+            if (targets.Count() > 0)
+            {
+                currentTarget = targets[0];
+            }
+           
 
-            canon.LookAt(new Vector3(currentTarget.position.x, canon.position.y, currentTarget.position.z));
+            if(currentTarget != null) canon.LookAt(new Vector3(currentTarget.position.x, canon.position.y, currentTarget.position.z));
+
         }
 
         if(canShoot & targets.Count > 0)

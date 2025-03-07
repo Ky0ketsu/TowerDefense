@@ -14,9 +14,12 @@ public class EnnemyCount : MonoBehaviour
 
     private void Update()
     {
+        enemyCount = transform.childCount;
+
         if (enemyCount == 0)
         {
             gameManager.GetComponent<GameManager>().EndWave();
+            Destroy(gameObject);
         }
     }
 

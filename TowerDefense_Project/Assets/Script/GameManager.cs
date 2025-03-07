@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
         spawnPoint = GameObject.Find("SpawnPoint").transform;
         money = 100;
         moneyPrint = GameObject.Find("Money");
+        buttonStart = GameObject.Find("StartButton");
+        firstWave = true;
     }
 
     private void Update()
@@ -33,20 +35,39 @@ public class GameManager : MonoBehaviour
         moneyPrint.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = money.ToString();
     }
 
+    private bool firstWave;
+
     public void StartNextWave()
     {
-        //spawner.GetComponent<Spawner>().Spawn1(10);
 
-        if(currentWave <= wave.Length)
+        if (currentWave <= wave.Length)
         {
-            Instantiate(wave[currentWave], spawnPoint);
+            if(firstWave)
+            {
+                Instantiate(wave[currentWave], spawnPoint);
+                firstWave=false;
+            }
+            else
+            {
+                currentWave++;
+                Instantiate(wave[currentWave], spawnPoint);
+            }
+            
         }
+        else Victory();
     }
 
+    private GameObject buttonStart;
 
     public void EndWave()
     {
+        buttonStart.SetActive(true);
         Debug.Log("fin de la vague");
+    }
+
+    public void Victory()
+    {
+        Debug.Log("victoire");
     }
 
 }

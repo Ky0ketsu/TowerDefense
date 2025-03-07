@@ -170,7 +170,7 @@ MonoBehaviour:
   reloadTime: 1
   targets: []
   damage: 5
-  baseDamage: 0
+  baseDamage: 5
   level: 0
 --- !u!54 &6085777518340459987
 Rigidbody:

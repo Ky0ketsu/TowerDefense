@@ -15,10 +15,12 @@ public class CursorCaseSelect : MonoBehaviour
     private Vector3 cursorWorldPos;
 
     private GameObject gameManager;
+    private GameObject buildMenu;
 
     private void Start()
     {
         gameManager = GameObject.Find("GameManager");
+        buildMenu = GameObject.Find("PlayScreen");
     }
 
     public void Update()
@@ -72,6 +74,8 @@ public class CursorCaseSelect : MonoBehaviour
             {
                 turretSelected = Instantiate(turret[ID], sphere.transform);
                 turretSelected.transform.localPosition = new Vector3(0, 2, 0);
+                buildMenu.GetComponent<BuildMenu>().isOpen = false;
+                buildMenu.GetComponent<BuildMenu>().menu.SetActive(false);
                 canPlaceTurret = true;
             }
         }
